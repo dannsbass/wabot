@@ -4,12 +4,16 @@ WABot adalah bot WhatsApp sederhana untuk mencari hadis dan terjemahnya. Repo in
 
 ## Cara Penggunaan
 
-Untuk menjalankan skrip ini, silakan [unduh](https://www.google.com/search?q=cara+download+github+repo) atau [kloning](https://www.google.com/search?q=cara+kloning+github+repo) repo ini, kemudian ketik perintah berikut di [terminal](https://www.google.com/search?q=terminal+komputer):
-1. ``` cd lokasi/foldermu/wabot ```
-2. ``` yarn ```
-3. ``` yarn carihadis ```
+Untuk menjalankan skrip ini, silakan [unduh](https://www.google.com/search?q=cara+download+github+repo) atau [kloning](https://www.google.com/search?q=cara+kloning+github+repo) repo ini. Dalam contoh ini, saya menggunakan cara kloning. Caranya, buka [terminal](https://www.google.com/search?q=terminal+komputer) lalu ketik perintah berikut:
 
-Sesuaikan `lokasi/foldermu` dengan lokasi sesungguhnya di mana kamu menyimpan folder `wabot` yang baru saja kamu unduh atau kloning. Jika muncul QR code di layar terminal, segera scan supaya login ([cara scan](https://faq.whatsapp.com/1079327266110265/?locale=id_ID&cms_platform=android)).
+```bash
+git clone https://github.com/dannsbass/wabot
+cd wabot
+yarn
+yarn carihadis 
+```
+
+Jika muncul QR code di layar terminal, segera scan supaya login ([cara scan](https://faq.whatsapp.com/1079327266110265/?locale=id_ID&cms_platform=android)).
 
 ## Syarat Penggunaan
 
