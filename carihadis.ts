@@ -197,8 +197,8 @@ const startSock = async() => {
 									const str = pesan
 									const query = encodeURIComponent(str)
 									var list = []
-									fetch(`${dkw}/?q=${query}`, { method: 'GET' }).then(response => response.json()).then(data => {
-										var hasil = getKeyByValue(data['hasil'], getCount(str))
+									fetch(`${dkw}/?q=${query}`, { method: 'GET' }).then(response => response.json()).then((data: { hasil: any }) => {
+										var hasil = getKeyByValue(data.hasil, getCount(str))
 										if(!hasil) {
 											sock!.sendMessage(msg!.key!.remoteJid!, { text: 'Maaf tidak ditemukan hasil' }, { quoted: msg })
 											sock!.readMessages([msg.key])
