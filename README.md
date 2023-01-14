@@ -9,7 +9,7 @@ Untuk menjalankan skrip ini, silakan [unduh](https://www.google.com/search?q=car
 2. ``` yarn ```
 3. ``` yarn carihadis ```
 
-Sesuaikan `lokasi/foldermu` dengan lokasi sesungguhnya di mana kamu menyimpan folder `wabot` yang baru saja kamu unduh atau kloning.
+Sesuaikan `lokasi/foldermu` dengan lokasi sesungguhnya di mana kamu menyimpan folder `wabot` yang baru saja kamu unduh atau kloning. Jika muncul QR code di layar terminal, segera scan supaya login ([cara scan](https://faq.whatsapp.com/1079327266110265/?locale=id_ID&cms_platform=android)).
 
 ## Syarat Penggunaan
 
