@@ -17,7 +17,7 @@ const kutub = [
 	'Riyadhus_Shalihin'
 ]
 const dkw = 'https://dkw.my.id'
-import fetch from 'node-fetch'
+const sedot = (url, opts) => import("node-fetch").then(({ default: fetch }) => fetch(url, opts));
 import { Boom } from '@hapi/boom'
 import MAIN_LOGGER from './src/Utils/logger'
 import makeWASocket, { AnyMessageContent, delay, DisconnectReason, fetchLatestBaileysVersion, isJidBroadcast, makeCacheableSignalKeyStore, makeInMemoryStore, MessageRetryMap, MiscMessageGenerationOptions, proto, useMultiFileAuthState } from './src'
@@ -117,7 +117,7 @@ const startSock = async() => {
 		const requestOptions = {
 			method: 'GET',
 		}
-		fetch(dkw + '/?kitab=' + namaKitab + '&id=' + nomorHadis, requestOptions)
+		sedot(dkw + '/?kitab=' + namaKitab + '&id=' + nomorHadis, requestOptions)
 			.then(json => json.json())
 			.then((data: { hasil: { nass_hadis: any; terjemah_hadis: any } }) => {
 				if(data.hasil.nass_hadis && data.hasil.terjemah_hadis) {
@@ -197,7 +197,7 @@ const startSock = async() => {
 									const str = pesan
 									const query = encodeURIComponent(str)
 									var list = []
-									fetch(`${dkw}/?q=${query}`, { method: 'GET' }).then(response => response.json()).then((data: { hasil: any }) => {
+									sedot(`${dkw}/?q=${query}`, { method: 'GET' }).then(response => response.json()).then((data: { hasil: any }) => {
 										var hasil = getKeyByValue(data.hasil, getCount(str))
 										if(!hasil) {
 											sock!.sendMessage(msg!.key!.remoteJid!, { text: 'Maaf tidak ditemukan hasil' }, { quoted: msg })
