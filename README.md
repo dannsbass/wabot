@@ -1,6 +1,6 @@
-# WABot
-
 <img src="https://github.com/dannsbass/wabot/blob/master/carihadis.jpg">
+
+# WABot
 
 WABot adalah bot WhatsApp sederhana untuk mencari hadis dan terjemahnya. Repo ini adalah hasil fork dari [Baileys](https://github.com/adiwajshing/Baileys).
 
