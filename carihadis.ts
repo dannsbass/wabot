@@ -119,7 +119,7 @@ const startSock = async() => {
 		}
 		fetch(dkw + '/?kitab=' + namaKitab + '&id=' + nomorHadis, requestOptions)
 			.then(json => json.json())
-			.then(data => {
+			.then((data: { hasil: { nass_hadis: any; terjemah_hadis: any } }) => {
 				if(data.hasil.nass_hadis && data.hasil.terjemah_hadis) {
 					var nassHadis = data.hasil.nass_hadis
 					var terjemahHadis = data.hasil.terjemah_hadis
